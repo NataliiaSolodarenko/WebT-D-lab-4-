@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Лабораторна робота №4</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .bg-1 {
+            background-color: #9499ac;
+            color: white;
+            padding: 40px;
+        }
+
+        .img-rounded-rectangle {
+            width: 100%; 
+            max-width: 150px; 
+            height: auto; 
+            border-radius: 10%;
+            object-fit: cover;
+        }
+
+        .form-container{
+            padding: 40px;
+            height: 570px;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <!-- Меню -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#">Назва сайту</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#section1">Головна</a></li>
+                    <li><a href="#section2">Форма</a></li>
+                    <li><a href="#section3">Контакти</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Головна секція -->
+    <div id="section1" class="container-fluid bg-1 text-center">
+        <h3>Ласкаво просимо!</h3>
+        <p>Цей сайт зроблений на Bootstrap.</p>
+        <img src="default-image.png" class="img-rounded-rectangle" alt="Підпис зображення">
+    </div>
+
+    <!-- Форма -->
+    <div id="section2" class="form-container">
+        <h3>Форма</h3>
+        <form>
+            <div class="form-group">
+                <label for="name">Ім'я:</label>
+                <input type="text" class="form-control" id="name" placeholder="Введіть ім'я">
+            </div>
+            <div class="form-group">
+                <label for="surname">Прізвище:</label>
+                <input type="text" class="form-control" id="surname" placeholder="Введіть прізвище">
+            </div>
+            <div class="form-group">
+                <label for="login">Логін:</label>
+                <input type="text" class="form-control" id="login" placeholder="Введіть логін">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Введіть email">
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" class="form-control" id="password" placeholder="Введіть пароль">
+            </div>
+            <button type="submit" class="btn btn-info" data-toggle="tooltip" title="Клацніть, щоб надіслати форму">Надіслати</button>
+        </form>
+    </div>
+
+    <!-- Контакти -->
+    <div id="section3" class="container-fluid bg-1 text-center">
+        <h3>Контакти</h3>
+        <p>Інформація про контакти.</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip(); 
+        });
+    </script>
+</body>
+</html>
